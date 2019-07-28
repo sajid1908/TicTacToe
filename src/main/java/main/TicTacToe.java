@@ -11,18 +11,18 @@ public static int[][] ticbox;
 		//check all cols
 		//loop through columns from 0 to 3 and check if all the 3 places have same marks
 		//check both diagonals 
-		for(int r=0;r<3;r++)
+		for(int row = 0; row < 3; row++)
 		{
-			if(tic[r][0]==1 && tic[r][1]==1 && tic[r][2]==1)
+			if(tic[row][0] == 1 && tic[row][1] == 1 && tic[row][2] == 1)
 				return 1;
-			if(tic[r][0]==2 && tic[r][1]==2 && tic[r][2]==2)
+			if(tic[row][0] == 2 && tic[row][1] == 2 && tic[row][2] == 2)
 				return 2;
 		}
-		for(int c=0;c<3;c++)
+		for(int col = 0; col <3 ; col++)
 		{
-			if(tic[0][c]==1 && tic[1][c]==1 && tic[2][c]==1)
+			if(tic[0][col] == 1 && tic[1][col] == 1 && tic[2][col] == 1)
 				return 1;
-			if(tic[0][c]==2 && tic[1][c]==2 && tic[2][c]==2)
+			if(tic[0][col] == 2 && tic[1][col] == 2 && tic[2][col] == 2)
 				return 2;
 		}
 		if(tic[0][0]==1 && tic[1][1]==1 && tic[2][2]==1)
@@ -52,10 +52,12 @@ public static int[][] ticbox;
 		//check if a2 is between 0 & 3
 		//check if the selected box is empty ie, already not marked by other player
 		
-		if((0<a1 && a1<3) && (0<a2 && a2<3))
+		if((0 < a1 && a1 < 3) && (0 < a2 && a2 < 3))
 		{
-			if(tic[a1][a2]==0)
+			if(tic[a1][a2] == 0)
+			{
 				return true;
+			}
 		}
 		return false;
 	}
