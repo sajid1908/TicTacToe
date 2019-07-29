@@ -52,7 +52,7 @@ public static int[][] ticbox;
 		//check if a2 is between 0 & 3
 		//check if the selected box is empty ie, already not marked by other player
 		
-		if((0 < a1 && a1 < 3) && (0 < a2 && a2 < 3))
+		if((0 <= a1 && a1 < 3) && (0 <= a2 && a2 < 3))
 		{
 			if(tic[a1][a2] == 0)
 			{
